@@ -1,0 +1,20 @@
+<!-- app/views/contact_us/new.html.erb -->
+<h1>Fale Conosco</h1>
+<p><%= link_to 'INÍCIO', root_path %>
+<%= form_with model: @contact, url: pages_contact_us_welcome_index_path do |f| %>
+  <div>
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div>
+    <%= f.label :mensagem %>
+    <%= f.text_area :mensagem %>
+  </div>
+  <div>
+    <%= f.submit "Enviar" %>
+  </div>
+<% end %>

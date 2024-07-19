@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MvpQualificar</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+  <div class="logo-container">
+    <div class="logo">
+      <!-- Aqui pode colocar a imagem da logo -->
+    </div>
+  </div>
+<h1 style="color: blue"> Herdando do Application_Controler  </h1>
+<div style="text-align: center;">
+    <p style="color: white; display: inline-block; padding: 10px 20px; background-color: blue; border-radius: 5px; text-align: center; width: 180px;">
+      <%= link_to 'INÍCIO', root_path, style: 'color: white; text-decoration: none; display: block; width: 100%;' %>
+    </p>
+  <div class="sidebar">
+  <div class="sidebar-menu">
+    <div class="menu-item"><%= link_to 'Área Restrita',  users_backoffice_welcome_index_path %></div>
+    <div class="menu-item"><%= link_to 'Cadastre-se', new_user_registration_path %></div>
+    <div class="menu-item"><%= link_to 'Nossos Cursos', pages_cursos_welcome_index_path %></div>
+    <div class="menu-item"><%= link_to 'Fale Conosco', pages_contact_us_welcome_index_path %></div>
+    <div class="menu-item"><%= link_to 'Quem Somos', pages_about_us_welcome_index_path %></div>
+  </div>
+</div>
+
+ 
+  <%= yield %>
+</body>
+</html>
